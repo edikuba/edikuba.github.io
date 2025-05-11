@@ -4,90 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Cuesta | SIEM Engineer para Grupo Digital</title>
-    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/cv-digital.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/logo-gdigital.png">
 </head>
 <body>
-    <div class="cv-container">
-        <!-- Header con efecto parallax -->
-        <header class="cv-header" style="background-image: url('assets/img/hero-bg.jpg')">
-            <div class="header-overlay"></div>
-            <div class="header-content">
-                <img src="assets/img/avatar-professional.png" alt="Edward Cuesta" class="cv-avatar">
-                <h1>Edward Cuesta</h1>
-                <p class="cv-tagline">SIEM Engineer & Cloud Security Specialist</p>
-                <div class="badge">Oferta Grupo Digital · Mayo 2025</div>
+    <!-- Fondo con partículas -->
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>EDWARD CUESTA BARON</h1>
+                <p class="tagline">Especialista en TI y Seguridad</p><br>
+                <div class="badge">Oferta SIEM Engineer · Grupo Digital</div><br>
+                <div class="contact-badge">
+                    <span>📞 +34 699 742 048</span>
+                    <span>📧 edward.cuesta.baron@gmail.com</span>
+                </div>
+            </div>
+            
+            <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <img src="assets/img/avatar.png" alt="Edward Cuesta" class="avatar">
+                <div class="avatar-ring"></div>
             </div>
         </header>
-
-        <!-- Contenido principal -->
-        <main class="cv-main">
-            <!-- Sección "Acerca de" -->
-            <section class="cv-section about-section">
-                <h2><span class="section-icon">👨‍💻</span> Perfil Profesional</h2>
-                <p class="highlight">Especialista en SIEM con 3+ años de experiencia en integración de logs, análisis de seguridad y hardening en entornos financieros. Certificado en Splunk y AWS Security.</p>
-                <div class="contact-box">
-                    <a href="mailto:edward.cuesta.baron@gmail.com" class="contact-btn">📧 Contactar</a>
-                    <a href="cv_GDigital_es.pdf" download class="download-btn">⬇️ Descargar CV</a>
+        
+        <main>
+            <!-- Sección About con efecto terminal -->
+            <section class="about">
+                <div class="section-content">
+                    <h2>PERFIL PROFESIONAL</h2>
+                    <div class="terminal">
+                        <p><span class="command">$ whoami</span></p>
+                        <p class="typing-text">Profesional con 10+ años en TI, especializado en integración de sistemas seguros. Actualmente enfocado en SIEM y seguridad cloud.</p>
+                        <p><span class="command">$ skills</span></p>
+                        <p>> Análisis de logs con herramientas SIEM-like</p>
+                        <p>> Configuración de iptables y hardening básico</p>
+                        <p>> Automatización con Bash scripting</p>
+                        <p>> AWS CloudTrail (en formación)</p>
+                    </div>
+                </div>
+                
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/img/log-analysis.avif" alt="Análisis de logs" class="avatar">
+                    <div class="avatar-ring"></div>
                 </div>
             </section>
-
-            <!-- Experiencia laboral -->
-            <section class="cv-section">
-                <h2><span class="section-icon">🔧</span> Experiencia Relevante</h2>
-                <div class="timeline">
-                    <!-- Item 1 -->
-                    <div class="timeline-item">
-                        <div class="timeline-header">
+            
+            <!-- Sección Experiencia -->
+            <section class="skills">
+                <div class="section-content">
+                    <h2>EXPERIENCIA RELEVANTE</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
                             <h3>Analista de Ciberseguridad</h3>
-                            <span class="timeline-date">2020 - 2021</span>
+                            <p class="timeline-date">Oct 2020 - Dic 2021 · SEVSERVICES S.A.</p>
+                            <ul>
+                                <li>Monitoreo de seguridad <strong>(SIEM-like)</strong> mediante análisis de logs</li>
+                                <li>Implementación de <strong>expresiones regulares</strong> para parsing de datos</li>
+                                <li>Automatización de alertas con <strong>scripts en Bash</strong></li>
+                            </ul>
                         </div>
-                        <div class="timeline-company">SEVSERVICES S.A.</div>
-                        <ul class="timeline-list">
-                            <li>Gestión de plataformas <strong>SIEM-SOAR</strong> para correlación de eventos de seguridad.</li>
-                            <li>Implementación de <strong>parsing con regex</strong> para normalización de logs.</li>
-                        </ul>
-                    </div>
-                    <!-- Item 2 -->
-                    <div class="timeline-item">
-                        <div class="timeline-header">
+                        <div class="timeline-item">
                             <h3>Especialista en TI</h3>
-                            <span class="timeline-date">2022 - Presente</span>
+                            <p class="timeline-date">Dic 2022 - Presente · Sanushealth Tech Solutions</p>
+                            <ul>
+                                <li>Integración de sistemas hospitalarios con enfoque en <strong>logging centralizado</strong></li>
+                                <li>Desarrollo de soluciones para trazabilidad de accesos</li>
+                            </ul>
                         </div>
-                        <div class="timeline-company">Sanushealth Tech Solutions</div>
-                        <ul class="timeline-list">
-                            <li>Arquitectura de <strong>redes seguras</strong> con logging centralizado.</li>
+                    </div>
+                </div>
+                
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/img/work-experience.png" alt="Experiencia profesional" class="avatar">
+                    <div class="avatar-ring"></div>
+                </div>
+            </section>
+            
+            <!-- Sección Habilidades -->
+            <section class="skills">
+                <div class="section-content">
+                    <h2>HABILIDADES TÉCNICAS</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">SIEM & Logs</div>
+                            <p>Análisis de logs, Wazuh, Splunk (Fundamentals)</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Cloud</div>
+                            <p>AWS CloudTrail, Google Cloud (básico)</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Seguridad</div>
+                            <p>Hardening básico, iptables, auditoría</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Automatización</div>
+                            <p>Bash scripting, integración de sistemas</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Redes</div>
+                            <p>Configuración de redes seguras</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Desarrollo</div>
+                            <p>HTML, CSS, PHP básico</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/img/IT-Skills.png" alt="Habilidades técnicas" class="avatar">
+                    <div class="avatar-ring"></div>
+                </div>
+            </section>
+            
+            <!-- Sección Proyecto Destacado -->
+            <section class="skills">
+                <div class="section-content">
+                    <h2>PROYECTO DESTACADO</h2>
+                    <div class="timeline-item">
+                        <h3>NAS Seguro con SIEM Open-Source</h3>
+                        <ul>
+                            <li>Configuración de <strong>auditoría e iptables</strong> para generación de logs</li>
+                            <li>Integración con <strong>Wazuh/Splunk Free</strong> para monitoreo centralizado</li>
+                            <li>Parsing de logs con <strong>regex</strong> para detectar accesos no autorizados</li>
                         </ul>
                     </div>
                 </div>
+                
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/img/nas-project.png" alt="Proyecto NAS" class="avatar">
+                    <div class="avatar-ring"></div>
+                </div>
             </section>
-
-            <!-- Skills con gráficos -->
-            <section class="cv-section skills-section">
-                <h2><span class="section-icon">📊</span> Habilidades Técnicas</h2>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>SIEM</h3>
-                        <div class="skill-bar" data-level="85">
-                            <span>Splunk</span>
-                        </div>
-                        <div class="skill-bar" data-level="75">
-                            <span>Wazuh</span>
-                        </div>
+            
+            <!-- Sección Contacto -->
+            <section id="contact" class="contact">
+                <div class="section-content">
+                    <h2>CONTACTO</h2>
+                    <p class="contact-description">Disponible para entrevistas en Grupo Digital:</p>
+                    <div class="contact-info">
+                        <p><strong>Teléfono:</strong> +34 699 742 048</p>
+                        <p><strong>Email:</strong> edward.cuesta.baron@gmail.com</p>
                     </div>
-                    <div class="skill-category">
-                        <h3>Cloud</h3>
-                        <div class="skill-bar" data-level="70">
-                            <span>AWS CloudTrail</span>
-                        </div>
-                    </div>
+                    <button class="btn-container">
+                        <span class="btn-flecha"></span>
+                        <span class="btn-flecha-shadow"></span>
+                        <span class="btn-flecha"></span>
+                        <span class="btn-flecha-shadow"></span>
+                        <span class="btn-flecha"></span>
+                        <span class="btn-flecha-shadow"></span>
+                        <span class="btn-flecha"></span>
+                        <span class="btn-text">CONTACTAR</span>
+                    </button>
+                </div>
+                
+                <div class="avatar-container">
+                    <div class="avatar-glow"></div>
+                    <img src="assets/img/contact.jpg" alt="Contacto" class="avatar">
+                    <div class="avatar-ring"></div>
                 </div>
             </section>
         </main>
-
-        <!-- Footer profesional -->
-        <footer class="cv-footer">
+    </div>
+        
+        <footer>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/edicuesta/"><i class="fab fa-linkedin"></i></a>
+            </div>
             <p>CV creado específicamente para Grupo Digital | Versión 1.0 (05/2025)</p>
             <div class="security-badge">
                 <span>🔒 URL privada - No compartir</span>
@@ -95,6 +188,9 @@
         </footer>
     </div>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="assets/js/cv-digital.js"></script>
 </body>
 </html>
