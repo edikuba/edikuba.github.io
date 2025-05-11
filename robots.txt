@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cvgdigital-es-05-09-2025_v1.html
+Disallow: /assets/
+Disallow: /cv_GDigital_es.pdf

@@ -1,0 +1,6 @@
+<FilesMatch "\.(html|pdf)$">
+    AuthType Basic
+    AuthName "Acceso Restringido"
+    AuthUserFile /ruta/.htpasswd
+    Require valid-user
+</FilesMatch>

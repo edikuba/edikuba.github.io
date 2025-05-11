@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Cuesta | Especialista en Integración de Sistemas Seguros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --neon-cyan: #00f7ff;
+            --neon-purple: #9d00ff;
+            --dark-bg: #0a0a1a;
+            --darker-bg: #050510;
+            --terminal-red: #ff2a2a;
+            --text-light: #e0e0e0;
+            --text-lighter: #ffffff;
+            --accent-blue: #0066ff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Efecto de partículas en el fondo */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to bottom, var(--darker-bg), var(--dark-bg));
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Hero Section - Estilo Neon Futurista Mejorado */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 0 60px;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 247, 255, 0.2);
+            min-height: 70vh;
+        }
+        
+        .hero-content {
+            width: 60%;
+            padding-right: 40px;
+        }
+        
+        .avatar-container {
+            position: relative;
+            width: 35%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .avatar {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            border: 3px solid var(--neon-cyan);
+            box-shadow: 0 0 40px rgba(0, 247, 255, 0.6);
+            transition: all 0.5s ease;
+        }
+        
+        .avatar-glow {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 247, 255, 0.4) 0%, rgba(0, 247, 255, 0) 70%);
+            filter: blur(15px);
+            animation: pulse 4s infinite alternate;
+            z-index: 1;
+        }
+        
+        .avatar-ring {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 2px dashed rgba(0, 247, 255, 0.4);
+            animation: rotate 20s linear infinite;
+        }
+        
+        .avatar-ring::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--neon-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.95); opacity: 0.6; }
+            100% { transform: scale(1.05); opacity: 0.9; }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        h1 {
+            font-size: 3.8rem;
+            margin: 0;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: 3px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            margin: 25px 0 0;
+            color: var(--text-light);
+            font-weight: 400;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .tagline::after {
+            content: "|";
+            margin-left: 8px;
+            color: var(--neon-cyan);
+            animation: blink 1s step-end infinite;
+        }
+        
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Secciones - Estilo Glassmorphism con Imágenes Alternadas */
+        section {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 60px 0;
+            border: 1px solid rgba(0, 247, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .section-content {
+            width: 55%;
+        }
+        
+        .section-image {
+            width: 40%;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .section-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .section-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 247, 255, 0.1), rgba(157, 0, 255, 0.1));
+            mix-blend-mode: overlay;
+            border-radius: 10px;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 247, 255, 0.15);
+            border-color: rgba(0, 247, 255, 0.3);
+        }
+        
+        section:hover .section-image img {
+            transform: scale(1.03);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            margin-top: 0;
+            color: var(--neon-cyan);
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-cyan), transparent);
+        }
+        
+        /* Terminal Section - Estilo Minimalista */
+        .terminal {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            padding: 25px;
+            font-family: 'IBM Plex Mono', monospace;
+            border: 1px solid var(--terminal-red);
+            position: relative;
+            margin-top: 30px;
+        }
+        
+        .terminal::before {
+            content: "terminal";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--dark-bg);
+            padding: 0 10px;
+            color: var(--terminal-red);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+        
+        .command {
+            color: var(--neon-cyan);
+        }
+        
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid var(--terminal-red);
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--terminal-red); }
+        }
+        
+        /* Botones - Estilo Mejorado como en la Referencia */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 35px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--neon-purple));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            transition: all 0.4s ease;
+            margin-top: 30px;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+        }
+        
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 102, 255, 0.6);
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 30px;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--neon-cyan), var(--neon-purple));
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 30px;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--neon-cyan);
+            box-shadow: 0 0 10px var(--neon-cyan);
+        }
+        
+        .timeline-date {
+            color: var(--neon-cyan);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .skill-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--neon-cyan);
+            transition: transform 0.3s ease;
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 247, 255, 0.05);
+        }
+        
+        .skill-name {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--neon-cyan);
+        }
+        
+        /* Contact Section */
+        .contact-info {
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 247, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--neon-cyan);
+        }
+        
+        /* Footer - Estilo Minimal */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 80px;
+            border-top: 1px solid rgba(0, 247, 255, 0.1);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--neon-cyan);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 80px 0 40px;
+                min-height: auto;
+            }
+            
+            .hero-content, .avatar-container {
+                width: 100%;
+                padding: 0;
+            }
+            
+            .avatar-container {
+                margin-top: 40px;
+                justify-content: center;
+            }
+            
+            section {
+                flex-direction: column;
+            }
+            
+            section:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .section-content, .section-image {
+                width: 100%;
+            }
+            
+            .section-image {
+                margin-top: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .tagline {
+                font-size: 1.4rem;
+            }
+            
+            section {
+                padding: 25px;
+            }
+            
+            .avatar {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .avatar-glow {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .avatar-ring {
+                width: 260px;
+                height: 260px;
+            }
+            
+            .skills-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Fondo con partículas -->
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>EDWARD CUESTA</h1>
+                <p class="tagline">Especialista en Integración de Sistemas Seguros</p>
+            </div>
+            
+            <div class="avatar-container">
+                <div class="avatar-glow"></div>
+                <img src="assets/img/avatar.jpg" alt="Edward Cuesta" class="avatar">
+                <div class="avatar-ring"></div>
+            </div>
+        </header>
+        
+        <main>
+            <!-- Sección About con efecto terminal -->
+            <section class="about">
+                <div class="section-content">
+                    <h2>SOBRE MÍ</h2>
+                    <div class="terminal">
+                        <p><span class="command">$ whoami</span></p>
+                        <p class="typing">Profesional con más de 10 años de experiencia en integración de sistemas y soluciones tecnológicas seguras.</p>
+                        <p><span class="command">$ skills</span></p>
+                        <p>> Automatización de procesos</p>
+                        <p>> Monitorización proactiva</p>
+                        <p>> Arquitecturas seguras</p>
+                        <p>> Mejora continua</p>
+                    </div>
+                </div>
+                
+                <div class="section-image">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tecnología segura">
+                </div>
+            </section>
+            
+            <!-- Sección Experiencia -->
+            <section class="experience">
+                <h2>EXPERIENCIA</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Integrador de Sistemas Senior</h3>
+                        <p class="timeline-date">2020 - Presente</p>
+                        <p>Diseño e implementación de arquitecturas seguras para entornos empresariales complejos.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>Consultor de Seguridad</h3>
+                        <p class="timeline-date">2015 - 2020</p>
+                        <p>Auditorías de seguridad y recomendaciones para optimización de infraestructuras.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- CTA Section -->
+            <section class="cta">
+                <h2>CONTACTO</h2>
+                <p>¿Interesado en mi perfil profesional completo?</p>
+                <p>Estoy disponible para proyectos desafiantes y colaboraciones.</p>
+                <a href="mailto:edward.cuesta.baron@gmail.com" class="btn">CONTACTAR</a>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2025 EDWARD CUESTA. TODOS LOS DERECHOS RESERVADOS.</p>
+        </footer>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Inicialización de partículas.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00f7ff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#00f7ff",
+                    "opacity": 0.2,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+        
+        // Efecto de escritura para múltiples elementos
+        document.addEventListener('DOMContentLoaded', function() {
+            const elements = document.querySelectorAll('.typing');
+            elements.forEach(el => {
+                const text = el.textContent;
+                el.textContent = '';
+                let i = 0;
+                const typing = setInterval(() => {
+                    if (i < text.length) {
+                        el.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typing);
+                    }
+                }, 50);
+            });
+        });
+    </script>
+</body>
+</html>
