@@ -41,7 +41,8 @@
                         <p><span class="command">$ whoami</span></p>
                         <p class="typing-text">Profesional con 10+ años en TI, especializado en integración de sistemas seguros. Actualmente enfocado en SIEM y seguridad cloud.</p>
                         <p><span class="command">$ skills</span></p>
-                        <p>> Análisis de logs con herramientas SIEM-like</p>
+                        <p>> Análisis de logs con <strong>Elastic Stack</strong></p>
+                        <p>> Pipelines en <strong>Logstash</strong> para normalización</p>
                         <p>> Configuración de iptables y hardening básico</p>
                         <p>> Automatización con Bash scripting</p>
                         <p>> AWS CloudTrail (en formación)</p>
@@ -94,7 +95,7 @@
                     <div class="skills-grid">
                         <div class="skill-item">
                             <div class="skill-name">SIEM & Logs</div>
-                            <p>Análisis de logs, Graylog, Splunk (Fundamentals)</p>
+                            <p>Elastic Stack (Elasticsearch, Logstash, Kibana)</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-name">Cloud</div>
@@ -134,8 +135,15 @@
                         <h3>NAS Seguro con SIEM Open-Source</h3>
                         <ul>
                             <li>Configuración de <strong>auditoría e iptables</strong> para generación de logs</li>
-                            <li>Integración con <strong>Graylog/Splunk Free</strong> para monitoreo centralizado</li>
-                            <li>Parsing de logs con <strong>regex</strong> para detectar accesos no autorizados</li>
+                            <li>Instalación/configuración de <strong>Elasticsearch, Logstash y Kibana</strong></li>
+                            <li>Dashboards en Kibana para monitorizar accesos SSH</li>
+                            <li>
+                                <strong>Parsing de logs</strong> con:
+                                <ul class="sublist">
+                                    <li>Filtros Grok en Logstash (para estructuración automática).</li>
+                                    <li>Regex personalizado para eventos complejos (ej: ataques brute-force).</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -153,7 +161,7 @@
                     <h2>CONTACTO</h2>
                     <p class="contact-description">Disponible para entrevistas en Grupo Digital:</p>
                     <!-- botón de descarga (añade esto) -->
-                    <button href="cv_GDigital_es.pdf" download class="btn-container">
+                    <a href="cv_GDigital_es.pdf" download class="btn-container">
                         <span class="btn-flecha"></span>
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
@@ -162,13 +170,13 @@
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
                         <span class="btn-text">DESCARGAR CV</span>
-                    </button>
+                    </a>
                     <p></p>
                     <div class="contact-info">
                         <p><strong>Teléfono:</strong> +34 699 742 048</p>
                         <p><strong>Email:</strong> edward.cuesta.baron@gmail.com</p>
                     </div>
-                    <button href="mailto:edward.cuesta.baron@gmail.com?subject=Entrevista%20SIEM%20Engineer%20-%20Grupo%20Digital" class="btn-container">
+                    <a href="mailto:edward.cuesta.baron@gmail.com?subject=Entrevista%20SIEM%20Engineer%20-%20Grupo%20Digital" class="btn-container">
                         <span class="btn-flecha"></span>
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
@@ -177,7 +185,7 @@
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
                         <span class="btn-text">CONTACTAR</span>
-                    </button>
+                    </a>
                 </div>
                 
                 <div class="avatar-container">
@@ -202,7 +210,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/cv-digital.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

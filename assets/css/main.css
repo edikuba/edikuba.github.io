@@ -284,6 +284,7 @@ h2::after {
     width: 160px;
     height: 45px;
     text-align: center;
+    text-decoration: none;
     cursor: pointer;
     border: none;
     background-color: transparent;
