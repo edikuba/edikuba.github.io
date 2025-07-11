@@ -194,11 +194,12 @@ document.addEventListener('DOMContentLoaded', function() {
         document.documentElement.lang = lang;
         
         // Update CV download link
-        const cvDownload = document.querySelector('a[href*="cv_GDigital"]');
-        if (cvDownload) {
-            cvDownload.href = lang === 'en' ? 
-                'cv_GDigital_en.pdf' : 'cv_GDigital_es.pdf';
-        }
+        const cvDownloadLinks = document.querySelectorAll('a[data-cv-base]');
+        cvDownloadLinks.forEach(link => {
+            const baseName = link.getAttribute('data-cv-base');
+            const extension = link.getAttribute('data-cv-extension') || 'pdf';
+            link.href = `${baseName}_${lang}.${extension}`;
+        });
     }
 
     // Apply translations on load
