@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edward Cuesta | SIEM Engineer para Grupo Digital</title>
+    <title>Edward Cuesta | SIEM Engineer for Grupo Digital</title>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/cv-digital.css">
+    <link rel="stylesheet" href="assets/css/traduce.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/logo-gdigital.png">
 </head>
 <body>
-    <!-- Fondo con partículas -->
+    <!-- Particle background -->
     <div id="particles-js"></div>
     
     <div class="container">
         <header class="hero">
             <div class="hero-content">
-                <h1>EDWARD CUESTA BARON</h1>
-                <p class="tagline">Especialista en TI y Seguridad</p><br>
-                <div class="badge">Oferta SIEM Engineer · Grupo Digital</div><br>
+                <div class="language-switcher">
+                    <button id="language-toggle">ES</button>
+                </div>
+                <h1 data-lang="cv_title">EDWARD CUESTA BARON</h1>
+                <p class="tagline" data-lang="cv_tagline">IT and Security Specialist</p><br>
+                <div class="badge" data-lang="cv_badge">SIEM Engineer Opportunity · Grupo Digital</div><br>
                 <div class="contact-badge">
                     <span>📞 +34 699 742 048</span>
                     <span>📧 edward.cuesta.baron@gmail.com</span>
@@ -33,49 +37,49 @@
         </header>
         
         <main>
-            <!-- Sección About con efecto terminal -->
+            <!-- About section with terminal effect -->
             <section class="about">
                 <div class="section-content">
-                    <h2>PERFIL PROFESIONAL</h2>
+                    <h2 data-lang="cv_about_title">PROFESSIONAL PROFILE</h2>
                     <div class="terminal">
-                        <p><span class="command">$ whoami</span></p>
-                        <p class="typing-text">Profesional con 10+ años en TI, especializado en integración de sistemas seguros. Actualmente enfocado en SIEM y seguridad cloud.</p>
-                        <p><span class="command">$ skills</span></p>
-                        <p>> Análisis de logs con <strong>Elastic Stack</strong></p>
-                        <p>> Pipelines en <strong>Logstash</strong> para normalización</p>
-                        <p>> Configuración de iptables y hardening básico</p>
-                        <p>> Automatización con Bash scripting</p>
-                        <p>> AWS CloudTrail (en formación)</p>
+                        <p><span class="command" data-lang="cv_command_whoami">$ whoami</span></p>
+                        <p class="typing-text" data-lang="cv_whoami_text">Professional with 10+ years in IT, specialized in secure systems integration. Currently focused on SIEM and cloud security.</p>
+                        <p><span class="command" data-lang="cv_command_skills">$ skills</span></p>
+                        <p data-lang="cv_skill1">> Log analysis with <strong>Elastic Stack</strong></p>
+                        <p data-lang="cv_skill2">> <strong>Logstash</strong> pipelines for normalization</p>
+                        <p data-lang="cv_skill3">> iptables configuration and basic hardening</p>
+                        <p data-lang="cv_skill4">> Automation with Bash scripting</p>
+                        <p data-lang="cv_skill5">> AWS CloudTrail (in training)</p>
                     </div>
                 </div>
                 
                 <div class="avatar-container">
                     <div class="avatar-glow"></div>
-                    <img src="assets/img/log-analysis.avif" alt="Análisis de logs" class="avatar">
+                    <img src="assets/img/log-analysis.avif" alt="Log analysis" class="avatar">
                     <div class="avatar-ring"></div>
                 </div>
             </section>
             
-            <!-- Sección Experiencia -->
+            <!-- Experience Section -->
             <section class="skills">
                 <div class="section-content">
-                    <h2>EXPERIENCIA RELEVANTE</h2>
+                    <h2 data-lang="cv_experience_title">RELEVANT EXPERIENCE</h2>
                     <div class="timeline">
                         <div class="timeline-item">
-                            <h3>Analista de Ciberseguridad</h3>
-                            <p class="timeline-date">Oct 2020 - Dic 2021 · SEVSERVICES S.A.</p>
+                            <h3 data-lang="cv_job_title1">Cybersecurity Analyst</h3>
+                            <p class="timeline-date" data-lang="cv_job_date1">Oct 2020 - Dec 2021 · SEVSERVICES S.A.</p>
                             <ul>
-                                <li>Monitoreo de seguridad <strong>(SIEM-like)</strong> mediante análisis de logs</li>
-                                <li>Implementación de <strong>expresiones regulares</strong> para parsing de datos</li>
-                                <li>Automatización de alertas con <strong>scripts en Bash</strong></li>
+                                <li data-lang="cv_job_desc1_1">Security monitoring <strong>(SIEM-like)</strong> through log analysis</li>
+                                <li data-lang="cv_job_desc1_2">Implementation of <strong>regular expressions</strong> for data parsing</li>
+                                <li data-lang="cv_job_desc1_3">Alert automation with <strong>Bash scripts</strong></li>
                             </ul>
                         </div>
                         <div class="timeline-item">
-                            <h3>Especialista en TI</h3>
-                            <p class="timeline-date">Dic 2022 - Presente · Sanushealth Tech Solutions</p>
+                            <h3 data-lang="cv_job_title2">IT Specialist</h3>
+                            <p class="timeline-date" data-lang="cv_job_date2">Dec 2022 - Present · Sanushealth Tech Solutions</p>
                             <ul>
-                                <li>Integración de sistemas hospitalarios con enfoque en <strong>logging centralizado</strong></li>
-                                <li>Desarrollo de soluciones para trazabilidad de accesos</li>
+                                <li data-lang="cv_job_desc2_1">Integration of hospital systems with focus on <strong>centralized logging</strong></li>
+                                <li data-lang="cv_job_desc2_2">Development of solutions for access traceability</li>
                             </ul>
                         </div>
                     </div>
@@ -83,65 +87,65 @@
                 
                 <div class="avatar-container">
                     <div class="avatar-glow"></div>
-                    <img src="assets/img/work-experience.png" alt="Experiencia profesional" class="avatar">
+                    <img src="assets/img/work-experience.png" alt="Professional experience" class="avatar">
                     <div class="avatar-ring"></div>
                 </div>
             </section>
             
-            <!-- Sección Habilidades -->
+            <!-- Technical Skills Section -->
             <section class="skills">
                 <div class="section-content">
-                    <h2>HABILIDADES TÉCNICAS</h2>
+                    <h2 data-lang="cv_skills_title">TECHNICAL SKILLS</h2>
                     <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-name">SIEM & Logs</div>
-                            <p>Elastic Stack (Elasticsearch, Logstash, Kibana)</p>
+                            <div class="skill-name" data-lang="cv_tech_skill1">SIEM & Logs</div>
+                            <p data-lang="cv_tech_skill1_desc">Elastic Stack (Elasticsearch, Logstash, Kibana)</p>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">Cloud</div>
-                            <p>AWS CloudTrail, Google Cloud (básico)</p>
+                            <div class="skill-name" data-lang="cv_tech_skill2">Cloud</div>
+                            <p data-lang="cv_tech_skill2_desc">AWS CloudTrail, Google Cloud (basic)</p>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">Seguridad</div>
-                            <p>Hardening básico, iptables, auditoría</p>
+                            <div class="skill-name" data-lang="cv_tech_skill3">Security</div>
+                            <p data-lang="cv_tech_skill3_desc">Basic hardening, iptables, auditing</p>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">Automatización</div>
-                            <p>Bash scripting, integración de sistemas</p>
+                            <div class="skill-name" data-lang="cv_tech_skill4">Automation</div>
+                            <p data-lang="cv_tech_skill4_desc">Bash scripting, system integration</p>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">Redes</div>
-                            <p>Configuración de redes seguras</p>
+                            <div class="skill-name" data-lang="cv_tech_skill5">Networking</div>
+                            <p data-lang="cv_tech_skill5_desc">Secure network configuration</p>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-name">Desarrollo</div>
-                            <p>HTML, CSS, PHP básico</p>
+                            <div class="skill-name" data-lang="cv_tech_skill6">Development</div>
+                            <p data-lang="cv_tech_skill6_desc">HTML, CSS, basic PHP</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="avatar-container">
                     <div class="avatar-glow"></div>
-                    <img src="assets/img/IT-Skills.png" alt="Habilidades técnicas" class="avatar">
+                    <img src="assets/img/IT-Skills.png" alt="Technical skills" class="avatar">
                     <div class="avatar-ring"></div>
                 </div>
             </section>
             
-            <!-- Sección Proyecto Destacado -->
+            <!-- Featured Project Section -->
             <section class="skills">
                 <div class="section-content">
-                    <h2>PROYECTO DESTACADO</h2>
+                    <h2 data-lang="cv_project_title">FEATURED PROJECT</h2>
                     <div class="timeline-item">
-                        <h3>NAS Seguro con SIEM Open-Source</h3>
+                        <h3 data-lang="cv_project_name">Secure NAS with Open-Source SIEM</h3>
                         <ul>
-                            <li>Configuración de <strong>auditoría e iptables</strong> para generación de logs</li>
-                            <li>Instalación/configuración de <strong>Elasticsearch, Logstash y Kibana</strong></li>
-                            <li>Dashboards en Kibana para monitorizar accesos SSH</li>
-                            <li>
-                                <strong>Parsing de logs</strong> con:
+                            <li data-lang="cv_project_point1">Configuration of <strong>auditing and iptables</strong> for log generation</li>
+                            <li data-lang="cv_project_point2">Installation/configuration of <strong>Elasticsearch, Logstash and Kibana</strong></li>
+                            <li data-lang="cv_project_point3">Kibana dashboards to monitor SSH access</li>
+                            <li data-lang="cv_project_point4">
+                                <strong>Log parsing</strong> with:
                                 <ul class="sublist">
-                                    <li>Filtros Grok en Logstash (para estructuración automática).</li>
-                                    <li>Regex personalizado para eventos complejos (ej: ataques brute-force).</li>
+                                    <li data-lang="cv_project_subpoint1">Grok filters in Logstash (for automatic structuring).</li>
+                                    <li data-lang="cv_project_subpoint2">Custom regex for complex events (e.g., brute-force attacks).</li>
                                 </ul>
                             </li>
                         </ul>
@@ -150,18 +154,18 @@
                 
                 <div class="avatar-container">
                     <div class="avatar-glow"></div>
-                    <img src="assets/img/nas-project.png" alt="Proyecto NAS" class="avatar">
+                    <img src="assets/img/nas-project.png" alt="NAS project" class="avatar">
                     <div class="avatar-ring"></div>
                 </div>
             </section>
             
-            <!-- Sección Contacto -->
+            <!-- Contact Section -->
             <section id="contact" class="contact">
                 <div class="section-content">
-                    <h2>CONTACTO</h2>
-                    <p class="contact-description">Disponible para entrevistas en Grupo Digital:</p>
-                    <!-- botón de descarga (añade esto) -->
-                    <a href="cv_GDigital_es.pdf" download class="btn-container">
+                    <h2 data-lang="cv_contact_title">CONTACT</h2>
+                    <p class="contact-description" data-lang="cv_contact_description">Available for interviews at Grupo Digital:</p>
+                    <!-- download button -->
+                    <a href="cv_GDigital_en.pdf" download class="btn-container">
                         <span class="btn-flecha"></span>
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
@@ -169,14 +173,14 @@
                         <span class="btn-flecha"></span>
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
-                        <span class="btn-text">DESCARGAR CV</span>
+                        <span class="btn-text" data-lang="cv_download_button">DOWNLOAD CV</span>
                     </a>
                     <p></p>
                     <div class="contact-info">
-                        <p><strong>Teléfono:</strong> +34 699 742 048</p>
-                        <p><strong>Email:</strong> edward.cuesta.baron@gmail.com</p>
+                        <p><strong data-lang="cv_phone_label">Phone:</strong> +34 699 742 048</p>
+                        <p><strong data-lang="cv_email_label">Email:</strong> edward.cuesta.baron@gmail.com</p>
                     </div>
-                    <a href="mailto:edward.cuesta.baron@gmail.com?subject=Entrevista%20SIEM%20Engineer%20-%20Grupo%20Digital" class="btn-container">
+                    <a href="mailto:edward.cuesta.baron@gmail.com?subject=SIEM%20Engineer%20Interview%20-%20Grupo%20Digital" class="btn-container">
                         <span class="btn-flecha"></span>
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
@@ -184,26 +188,25 @@
                         <span class="btn-flecha"></span>
                         <span class="btn-flecha-shadow"></span>
                         <span class="btn-flecha"></span>
-                        <span class="btn-text">CONTACTAR</span>
+                        <span class="btn-text" data-lang="cv_contact_button">CONTACT</span>
                     </a>
                 </div>
                 
                 <div class="avatar-container">
                     <div class="avatar-glow"></div>
-                    <img src="assets/img/contact.jpg" alt="Contacto" class="avatar">
+                    <img src="assets/img/contact.jpg" alt="Contact" class="avatar">
                     <div class="avatar-ring"></div>
                 </div>
             </section>
         </main>
-    </div>
         
         <footer>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/edicuesta/"><i class="fab fa-linkedin"></i></a>
             </div>
-            <p>CV creado específicamente para Grupo Digital | Versión 1.0 (05/2025)</p>
+            <p data-lang="cv_footer_text">CV created specifically for Grupo Digital | Version 1.0 (05/2025)</p>
             <div class="security-badge">
-                <span>🔒 URL privada - No compartir</span>
+                <span data-lang="cv_security_badge">🔒 Private URL - Do not share</span>
             </div>
         </footer>
     </div>
@@ -211,5 +214,6 @@
     <!-- Scripts -->
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/traduce.js"></script>
 </body>
 </html>
