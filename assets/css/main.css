@@ -135,18 +135,6 @@ h1 {
     display: inline-block;
 }
 
-.tagline::after {
-    content: "|";
-    margin-left: 8px;
-    color: var(--neon-cyan);
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-    from, to { opacity: 1; }
-    50% { opacity: 0; }
-}
-
 /* Secciones - Estilo Glassmorphism con Imágenes Alternadas */
 section {
     background: rgba(255, 255, 255, 0.05);
@@ -259,21 +247,17 @@ h2::after {
 
 .cursor {
     display: inline-block;
-    width: 2px;
+    width: 3px;
     height: 20px; /* Ajusta la altura según tu fuente */
     background-color: var(--terminal-red); /* Asegúrate de que esta variable CSS esté definida */
     vertical-align: middle; /* Asegura que el cursor esté alineado correctamente */
-}
-
-.blink-caret {
     animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from, to { opacity: 0; }
-    50% { opacity: 1; }
+  from, to { opacity: 0; }
+  50% { opacity: 1; }
 }
-
 
 /* Contenedor del botón */
 .btn-container {

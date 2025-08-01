@@ -1,77 +1,91 @@
 document.addEventListener("DOMContentLoaded", function () {
     // =============================================
-    // 1. INICIALIZACIÓN DE PARTÍCULAS (FONDO DINÁMICO)
+    // 1. PARTICULAS DE FONDO CON particles.js
     // =============================================
     particlesJS("particles-js", {
-        "particles": {
-            "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-            "color": { "value": "#00f7ff" },
-            "shape": { "type": "circle", "polygon": { "nb_sides": 5 } },
-            "opacity": { "value": 0.5 },
-            "size": { "value": 3, "random": true },
-            "line_linked": { "enable": true, "distance": 150, "color": "#00f7ff", "opacity": 0.2, "width": 1 },
-            "move": { "enable": true, "speed": 2, "direction": "none" }
-        },
-        "interactivity": {
-            "events": {
-                "onhover": { "enable": true, "mode": "grab" },
-                "onclick": { "enable": true, "mode": "push" }
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#00f7ff" },
+            shape: { type: "circle", polygon: { nb_sides: 5 } },
+            opacity: { value: 0.5 },
+            size: { value: 3, random: true },
+            line_linked: {
+                enable: true,
+                distance: 150,
+                color: "#00f7ff",
+                opacity: 0.2,
+                width: 1
             },
-            "modes": {
-                "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
-                "bubble": { "distance": 400, "size": 40, "duration": 2 },
-                "repulse": { "distance": 200, "duration": 0.4 }
+            move: { enable: true, speed: 2, direction: "none" }
+        },
+        interactivity: {
+            events: {
+                onhover: { enable: true, mode: "grab" },
+                onclick: { enable: true, mode: "push" }
+            },
+            modes: {
+                grab: {
+                    distance: 140,
+                    line_linked: { opacity: 1 }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                }
             }
         },
-        "retina_detect": true
+        retina_detect: true
     });
 
     // =============================================
-    // 2. EFECTO TYPING (TEXTO QUE SE ESCRIBE SOLO)
+    // 2. EFECTO DE ESCRITURA TIPO "TYPING"
     // =============================================
     const elements = document.querySelectorAll(".typing-text");
     elements.forEach(el => {
-        const text = el.textContent;
+        const text = el.textContent.trim();
         el.textContent = '';
 
         const cursor = document.createElement('span');
-        cursor.className = 'cursor';
+        cursor.className = 'cursor'; // ¡Ya animado!
         el.appendChild(cursor);
 
         let i = 0;
         const typing = setInterval(() => {
             if (i < text.length) {
-                const char = document.createTextNode(text.charAt(i));
-                el.insertBefore(char, cursor);
-                i++;
+            cursor.insertAdjacentText('beforebegin', text.charAt(i));
+            i++;
             } else {
-                clearInterval(typing);
-                cursor.classList.add('blink-caret');
+            clearInterval(typing);
+            // No hace falta añadir blink-caret, ya lo tiene activo
             }
         }, 80);
     });
 
     // =============================================
-    // 3. EFECTOS INTERACTIVOS (BOTONES, TIMELINE, BADGE)
+    // 3. INTERACTIVIDAD VISUAL: BOTONES, TIMELINE, BADGE
     // =============================================
-    // ---- 3.1. BADGE "Oferta Grupo Digital" ----
+
+    // ---- 3.1. BADGE INTERACTIVO ----
     const badge = document.querySelector('.badge');
-    if(badge) {
-        badge.addEventListener('mouseenter', function() {
+    if (badge) {
+        badge.addEventListener('mouseenter', function () {
             this.style.background = 'rgba(42, 92, 138, 0.5)';
             this.style.boxShadow = '0 0 15px rgba(74, 144, 226, 0.5)';
         });
-        
-        badge.addEventListener('mouseleave', function() {
+        badge.addEventListener('mouseleave', function () {
             this.style.background = 'rgba(42, 92, 138, 0.3)';
             this.style.boxShadow = 'none';
         });
     }
 
-    // ---- 3.2. BOTONES (CONTACTO + DESCARGAR) ----
+    // ---- 3.2. BOTONES CON FLECHAS ----
     document.querySelectorAll('.btn-container').forEach(btn => {
-        // Efecto hover: Animación de flechas
-        btn.addEventListener('mouseenter', function() {
+        btn.addEventListener('mouseenter', function () {
             const arrows = this.querySelectorAll('.btn-flecha');
             arrows.forEach((arrow, index) => {
                 arrow.style.transform = 'translateX(5px)';
@@ -80,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        btn.addEventListener('mouseleave', function() {
+        btn.addEventListener('mouseleave', function () {
             const arrows = this.querySelectorAll('.btn-flecha');
             arrows.forEach(arrow => {
                 arrow.style.transform = 'translateX(0)';
@@ -88,26 +102,25 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Efecto click (feedback táctil)
-        btn.addEventListener('mousedown', function() {
+        btn.addEventListener('mousedown', function () {
             this.style.transform = 'scale(0.98)';
         });
-        
-        btn.addEventListener('mouseup', function() {
+
+        btn.addEventListener('mouseup', function () {
             this.style.transform = 'scale(1)';
         });
     });
 
-    // ---- 3.3. ITEMS DE TIMELINE ----
+    // ---- 3.3. TIMELINE ANIMADO ----
     const timelineItems = document.querySelectorAll('.timeline-item');
     timelineItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
+        item.addEventListener('mouseenter', function () {
             this.style.transform = 'translateX(10px)';
             this.style.boxShadow = '0 5px 15px rgba(0, 247, 255, 0.2)';
             this.style.transition = 'all 0.3s ease';
         });
 
-        item.addEventListener('mouseleave', function() {
+        item.addEventListener('mouseleave', function () {
             this.style.transform = 'translateX(0)';
             this.style.boxShadow = 'none';
         });
